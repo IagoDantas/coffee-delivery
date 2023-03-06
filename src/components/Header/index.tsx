@@ -7,11 +7,11 @@ export function Header() {
       <img src={coffeeDeliveryLogo} alt="" draggable="false" />
       <NavActions>
         <LocationActions>
-          <MapPin weight="fill" size={20} color="#8047f8" />
+          <MapPin weight="fill" size={18} color="#8047f8" />
           Porto Alegre, RS
         </LocationActions>
         <CartButton type="button">
-          <ShoppingCart weight="fill" size={20} />
+          <ShoppingCart weight="fill" size={18} />
         </CartButton>
       </NavActions>
     </NavContainer>

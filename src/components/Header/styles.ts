@@ -1,16 +1,31 @@
 import styled from 'styled-components'
 
 export const NavContainer = styled.nav`
+  height: 6.5rem;
   padding: 2rem 10rem;
+  position: sticky;
   gap: 51.25rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: row;
+`
+
+export const NavActions = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
   align-items: center;
 `
 
 export const LocationActions = styled.span`
   display: flex;
+  height: 2.375rem;
+  width: 8.9375rem;
   align-items: center;
+  justify-content: center;
   background: ${(props) => props.theme['purple-light']};
   color: ${(props) => props.theme['purple-dark']};
   gap: 4px;
@@ -19,13 +34,6 @@ export const LocationActions = styled.span`
   line-height: 130%;
   font-size: 0.875rem;
 `
-
-export const NavActions = styled.div`
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-`
-
 export const CartButton = styled.button`
   background: ${(props) => props.theme['yellow-light']};
   line-height: 0;
