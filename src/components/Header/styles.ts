@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const NavContainer = styled.nav`
+  width: 93.75rem;
   height: 6.5rem;
   padding: 2rem 10rem;
   position: sticky;
@@ -8,12 +9,14 @@ export const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-self: stretch;
-  flex-direction: row;
+
+  > img {
+    position: relative;
+    left: 4.6rem;
+  }
 `
 
 export const NavActions = styled.div`
-  width: 100%;
   display: flex;
   gap: 0.75rem;
   justify-content: center;
@@ -44,6 +47,7 @@ export const CartButton = styled.button`
   padding: 0.5rem;
   color: ${(props) => props.theme['yellow-dark']};
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
   &:hover {
     background: ${(props) => props.theme.yellow};
     color: ${(props) => props.theme.white};

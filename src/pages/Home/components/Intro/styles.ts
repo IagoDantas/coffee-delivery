@@ -3,22 +3,21 @@ import introBackgroundImg from '../../../../assets/intro-background.png'
 import { rgba } from 'polished'
 
 export const IntroContainer = styled.section`
-  max-width: 100vw;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1590px;
   height: 34rem;
 
   background: ${({ theme }) => `url(${introBackgroundImg}) no-repeat center,
     linear-gradient(
       0deg,
-      ${theme.white} 0%,
+      ${theme.white} 1%,
       ${rgba(theme.background, 0.2)} 50%,
       ${theme.background} 100%
     )`};
   background-size: cover;
-  gap: 14rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 3.5rem;
 `
 
 export const IntroContent = styled.article`
@@ -30,6 +29,7 @@ export const IntroContent = styled.article`
   height: 12rem;
   h1 {
     font-size: 3rem;
+    font-weight: 800;
     line-height: 130%;
     color: ${({ theme }) => theme['base-title']};
     font-family: 'Baloo 2', cursive;
@@ -79,7 +79,7 @@ interface ColorProps {
 }
 
 export const BadgeIcon = styled.div<ColorProps>`
-  color: ${({ theme }) => theme.white};
+  color: ${(props) => props.theme.white};
   background: ${(props) => props.theme[BADGE_COLORS[props.color]]};
   display: flex;
   align-items: center;
