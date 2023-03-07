@@ -1,20 +1,35 @@
 import { Minus, Plus, ShoppingCartSimple } from 'phosphor-react'
-import cafeExpresso from '../../../../assets/expresso.png'
-
 import { CoffeeListItem, CoffeeListBadge, CoffeeListActions } from './styles'
-export function Coffee() {
+
+interface CoffeeProps {
+  id: string
+  name: string
+  price: number
+  description: string
+  tags: string[]
+  imagePath: string
+}
+
+export function Coffee({
+  name,
+  price,
+  description,
+  tags,
+  imagePath,
+}: CoffeeProps) {
   return (
     <CoffeeListItem>
-      <img src={cafeExpresso} alt="" />
+      <img src={`/src/assets/${imagePath}`} alt="" />
       <CoffeeListBadge>
-        <span>especial</span>
-        <span>com leite</span>
+        {tags.map((tag) => {
+          return <span key={tag}>{tag}</span>
+        })}
       </CoffeeListBadge>
-      <strong>Expresso Tradicional</strong>
-      <span>O tradicional café feito com água quente e grãos moídos</span>
+      <strong>{name}</strong>
+      <span>{description}</span>
       <CoffeeListActions>
         <span>R$</span>
-        <strong>9,90</strong>
+        <strong>{price}0</strong>
         <div>
           <button type="button">
             <Minus weight="bold" />
