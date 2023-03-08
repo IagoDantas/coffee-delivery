@@ -66,7 +66,6 @@ export const coffees = [
     tags: ['Tradicional', 'Com leite'],
     imagePath: 'macchiato.png',
   },
-  // começar daqui
   {
     id: '805ec44d-c3d7-4516-8052-915218c7e53d',
     name: 'Mocaccino',
