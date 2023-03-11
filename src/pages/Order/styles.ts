@@ -9,7 +9,7 @@ export const OrderContainer = styled.div`
   gap: 32px;
 `
 
-export const OrderFormWrapper = styled.div`
+export const OrderAddressFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,7 @@ export const OrderFormWrapper = styled.div`
     color: ${(props) => props.theme['base-subtitle']};
   }
 `
-export const OrderForm = styled.form`
+export const OrderAddressForm = styled.form`
   display: flex;
   width: 640px;
   height: 372px;
@@ -35,13 +35,30 @@ export const OrderForm = styled.form`
   gap: 12px;
   background: ${(props) => props.theme['base-card']};
 `
+export const OrderAddressTitle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
 
+  > span {
+    color: ${(props) => props.theme['base-subtitle']};
+    line-height: 130%;
+  }
+`
+export const OrderAddressDescription = styled.div`
+  position: relative;
+  font-size: 14px;
+  left: 30px;
+  line-height: 130%;
+  top: 2px;
+`
 export const OrderConfirmWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 16px;
 
   h1 {
     font-size: 18px;
@@ -50,6 +67,61 @@ export const OrderConfirmWrapper = styled.div`
     line-height: 130%;
     color: ${(props) => props.theme['base-subtitle']};
   }
+`
+export const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 40px;
+  width: 560px;
+  height: 216px;
+`
+
+export const OrderAddressFormHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  svg {
+    color: ${(props) => props.theme['yellow-dark']};
+  }
+`
+
+export const OrderAddressBaseInput = styled.input`
+  display: flex;
+  background: ${(props) => props.theme['base-input']};
+  border: 1px solid ${(props) => props.theme['base-button']};
+  border-radius: 4px;
+  height: 42px;
+  gap: 4px;
+  padding: 12px;
+  color: ${(props) => props.theme['base-text']};
+
+  &::placeholder {
+    color: ${(props) => props.theme['base-label']};
+    font-size: 14px;
+    line-height: 130%;
+  }
+`
+
+export const OrderAddressRuaInput = styled(OrderAddressBaseInput)`
+  align-self: stretch;
+`
+export const OrderAddressNumeroInput = styled(OrderAddressBaseInput)``
+
+export const OrderAddressComplementoInput = styled(OrderAddressBaseInput)`
+  align-self: stretch;
+  width: 348px;
+`
+export const OrderAddressCidadeInput = styled(OrderAddressBaseInput)`
+  width: 276px;
+  align-self: stretch;
+`
+
+export const OrderAddressUFInput = styled(OrderAddressBaseInput)`
+  width: 60px;
 `
 
 export const OrderConfirm = styled.div`
@@ -79,6 +151,7 @@ export const PaymentWrapper = styled.div`
     color: ${(props) => props.theme.purple};
   }
 `
+
 export const PaymentHeader = styled.header`
   display: flex;
   flex-direction: column;

@@ -1,25 +1,66 @@
-// import { OrderForm } from './components/OrderForm'
-import { Bank, CreditCard, CurrencyDollar, Money } from 'phosphor-react'
+// import { OrderAddressForm } from './components/OrderAddressForm'
+import {
+  Bank,
+  CreditCard,
+  CurrencyDollar,
+  MapPinLine,
+  Money,
+} from 'phosphor-react'
 import {
   OrderConfirm,
   OrderConfirmWrapper,
   OrderContainer,
-  OrderForm,
-  OrderFormWrapper,
+  OrderAddressForm,
+  OrderAddressFormWrapper,
+  OrderAddressFormHeader,
   PaymentWrapper,
+  OrderAddressRuaInput,
   PaymentHeader,
   PaymentTitle,
   PaymentButtonWrapper,
   PaymentDescription,
+  OrderAddressTitle,
+  OrderAddressDescription,
+  FormContainer,
+  OrderAddressBaseInput,
+  OrderAddressNumeroInput,
+  OrderAddressComplementoInput,
+  OrderAddressUFInput,
+  OrderAddressCidadeInput,
 } from './styles'
 
 export function Order() {
   return (
     <OrderContainer>
-      {/* <OrderForm /> */}
-      <OrderFormWrapper>
+      {/* <OrderAddressForm /> */}
+      <OrderAddressFormWrapper>
         <h1>Complete seu pedido</h1>
-        <OrderForm></OrderForm>
+        <OrderAddressForm>
+          <OrderAddressFormHeader>
+            <OrderAddressTitle>
+              <MapPinLine size={22} />
+              <span>Endereço de Entrega</span>
+            </OrderAddressTitle>
+            <OrderAddressDescription>
+              Informe o endereço onde deseja receber seu pedido
+            </OrderAddressDescription>
+          </OrderAddressFormHeader>
+          <form action="">
+            <FormContainer>
+              <OrderAddressBaseInput placeholder="CEP" />
+              <OrderAddressRuaInput placeholder="Rua" />
+              <div style={{ display: 'flex', gap: '12px' }}>
+                <OrderAddressNumeroInput placeholder="Número" />
+                <OrderAddressComplementoInput placeholder="Complemento" />
+              </div>
+              <div style={{ display: 'flex', gap: '12px' }}>
+                <OrderAddressNumeroInput placeholder="Bairro" />
+                <OrderAddressCidadeInput placeholder="Cidade" />
+                <OrderAddressUFInput placeholder="UF" />
+              </div>
+            </FormContainer>
+          </form>
+        </OrderAddressForm>
         <PaymentWrapper>
           <PaymentHeader>
             <PaymentTitle>
@@ -47,7 +88,7 @@ export function Order() {
             </button>
           </PaymentButtonWrapper>
         </PaymentWrapper>
-      </OrderFormWrapper>
+      </OrderAddressFormWrapper>
       <OrderConfirmWrapper>
         <h1>Cafés selecionados</h1>
         <OrderConfirm>
