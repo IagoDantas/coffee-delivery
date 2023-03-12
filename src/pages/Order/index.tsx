@@ -4,8 +4,15 @@ import {
   CreditCard,
   CurrencyDollar,
   MapPinLine,
+  Minus,
   Money,
+  Plus,
+  Trash,
 } from 'phosphor-react'
+
+import expressoTradicional from '../../assets/expresso.png'
+import expressoCremoso from '../../assets/expresso-cremoso.png'
+
 import {
   OrderConfirm,
   OrderConfirmWrapper,
@@ -27,6 +34,8 @@ import {
   OrderAddressComplementoInput,
   OrderAddressUFInput,
   OrderAddressCidadeInput,
+  SelectedCoffee,
+  Separator,
 } from './styles'
 
 export function Order() {
@@ -92,7 +101,52 @@ export function Order() {
       <OrderConfirmWrapper>
         <h1>Cafés selecionados</h1>
         <OrderConfirm>
-          <div></div>
+          <SelectedCoffee>
+            <img src={expressoTradicional} alt="" />
+            <div>
+              <span>Expresso Tradicional</span>
+              <div>
+                <div>
+                  <button type="button">
+                    <Minus weight="bold" size={14} />
+                  </button>
+                  <span>1</span>
+                  <button type="button">
+                    <Plus weight="bold" size={14} />
+                  </button>
+                </div>
+                <button type="button">
+                  <Trash weight="bold" size={16} />
+                  Remover
+                </button>
+              </div>
+            </div>
+            <strong>R$ 9,90</strong>
+          </SelectedCoffee>
+          <Separator />
+          <SelectedCoffee>
+            <img src={expressoCremoso} alt="" />
+            <div>
+              <span>Expresso Cremoso</span>
+              <div>
+                <div>
+                  <button type="button">
+                    <Minus weight="bold" size={14} />
+                  </button>
+                  <span>1</span>
+                  <button type="button">
+                    <Plus weight="bold" size={14} />
+                  </button>
+                </div>
+                <button type="button">
+                  <Trash weight="bold" size={16} />
+                  Remover
+                </button>
+              </div>
+            </div>
+            <strong>R$ 19,90</strong>
+          </SelectedCoffee>
+          <Separator />
         </OrderConfirm>
       </OrderConfirmWrapper>
     </OrderContainer>
