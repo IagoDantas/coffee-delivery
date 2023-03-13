@@ -40,7 +40,7 @@ export const LocationActions = styled.span`
   gap: 4px;
   padding: 0.5rem;
   border-radius: 6px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 130%;
   font-size: 0.875rem;
 `

@@ -27,10 +27,12 @@ import {
   PaymentButtonWrapper,
   PaymentDescription,
   OrderAddressTitle,
+  OrderConfirmButton,
   OrderAddressDescription,
   FormContainer,
   OrderAddressBaseInput,
   OrderAddressNumeroInput,
+  PriceDetails,
   OrderAddressComplementoInput,
   OrderAddressUFInput,
   OrderAddressCidadeInput,
@@ -147,6 +149,23 @@ export function Order() {
             <strong>R$ 19,90</strong>
           </SelectedCoffee>
           <Separator />
+          <PriceDetails>
+            <div>
+              <span>Total de itens</span>
+              <span>R$ 29,90</span>
+            </div>
+            <div>
+              <span>Entrega</span>
+              <span>R$ 3,50</span>
+            </div>
+            <div>
+              <strong>Total</strong>
+              <strong>R$ 33,20</strong>
+            </div>
+          </PriceDetails>
+          <OrderConfirmButton type="submit">
+            Confirmar pedido
+          </OrderConfirmButton>
         </OrderConfirm>
       </OrderConfirmWrapper>
     </OrderContainer>

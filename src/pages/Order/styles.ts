@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const OrderContainer = styled.div`
   display: flex;
-  flex: 1;
   align-items: flex-start;
   justify-content: center;
+  flex-direction: row;
   margin-top: 2.5rem;
   gap: 32px;
 `
@@ -100,7 +100,7 @@ export const OrderAddressBaseInput = styled.input`
   gap: 4px;
   padding: 12px;
   color: ${(props) => props.theme['base-text']};
-
+  transition: all 0.2s;
   &::placeholder {
     color: ${(props) => props.theme['base-label']};
     font-size: 14px;
@@ -265,6 +265,7 @@ export const SelectedCoffee = styled.div`
     line-height: 0;
     color: ${(props) => props.theme['base-text']};
     font-size: 12px;
+    cursor: pointer;
     width: 91px;
     height: 32px;
     text-transform: uppercase;
@@ -298,6 +299,7 @@ export const SelectedCoffee = styled.div`
     margin: 9px 8px;
     border-radius: 4px;
     justify-content: center;
+    cursor: pointer;
     background: ${(props) => props.theme['base-button']};
     border: 0;
     color: ${(props) => props.theme['base-title']};
@@ -312,5 +314,56 @@ export const SelectedCoffee = styled.div`
         color: ${(props) => props.theme['purple-dark']};
       }
     }
+  }
+`
+export const PriceDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 368px;
+  height: 92px;
+  align-selft: stretch;
+  margin-top: 24px;
+  gap: 12px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    span:first-child {
+      font-size: 14px;
+      line-height: 130%;
+      color: ${(props) => props.theme['base-text']};
+      font-weight: 400;
+    }
+
+    strong {
+      font-size: 20px;
+      line-height: 130%;
+      font-weight: 700;
+      color: ${(props) => props.theme['base-subtitle']};
+    }
+  }
+`
+export const OrderConfirmButton = styled.button`
+  margin-top: 24px;
+  width: 368px;
+  border: 0;
+  height: 46px;
+  gap: 4px;
+  padding: 12px 8px;
+  border-radius: 6px;
+  background: ${(props) => props.theme.yellow};
+  color: ${(props) => props.theme.white};
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 160%;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    background: ${(props) => props.theme['yellow-dark']};
   }
 `
