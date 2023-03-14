@@ -31,7 +31,7 @@ export function Intro() {
               <BadgeIcon color="yellow">
                 <Timer weight="fill" />
               </BadgeIcon>
-              <span>Compra simples e segura</span>
+              <span>Entrega rápida e rastreada</span>
             </Badge>
           </IntroBadgeColumn>
           <IntroBadgeColumn>
