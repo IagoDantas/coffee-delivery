@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SuccessContainer = styled.div`
+export const OrderConfirmContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,14 +16,14 @@ export const SuccessContainer = styled.div`
   }
 `
 
-export const SuccessTitle = styled.h1`
+export const OrderConfirmTitle = styled.h1`
   font-size: 32px;
   font-weight: 800;
   color: ${(props) => props.theme['yellow-dark']};
   font-family: 'Baloo 2', cursive;
   line-height: 130%;
 `
-export const SuccessParagraph = styled.p`
+export const OrderConfirmParagraph = styled.p`
   font-size: 20px;
   font-weight: 400;
   color: ${(props) => props.theme['base-subtitle']};
@@ -39,7 +39,7 @@ export const Border = styled.div`
   background: linear-gradient(102.89deg, #dbac2c 2.61%, #8047f8 98.76%);
   overflow: hidden;
 `
-export const SuccessItems = styled.div`
+export const OrderConfirmItems = styled.div`
   display: flex;
   flex-direction: column;
   padding: 40px;

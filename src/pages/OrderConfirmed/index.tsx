@@ -1,25 +1,25 @@
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
 import {
-  SuccessContainer,
-  SuccessTitle,
-  SuccessParagraph,
-  SuccessItems,
+  OrderConfirmContainer,
+  OrderConfirmTitle,
+  OrderConfirmParagraph,
+  OrderConfirmItems,
   BadgeIcon,
   Border,
 } from './styles'
-import successDelivery from '../../assets/success-delivery.png'
+import orderConfirmDelivery from '../../assets/success-delivery.png'
 
 export function OrderConfirmed() {
   return (
     <>
-      <SuccessContainer>
+      <OrderConfirmContainer>
         <div>
-          <SuccessTitle>Uhu! Pedido confirmado</SuccessTitle>
-          <SuccessParagraph>
+          <OrderConfirmTitle>Uhu! Pedido confirmado</OrderConfirmTitle>
+          <OrderConfirmParagraph>
             Agora é só aguardar que logo o café chegará até você
-          </SuccessParagraph>
+          </OrderConfirmParagraph>
           <Border>
-            <SuccessItems>
+            <OrderConfirmItems>
               <div>
                 <BadgeIcon color="purple">
                   <MapPin weight="fill" />
@@ -51,11 +51,11 @@ export function OrderConfirmed() {
                   <strong>Cartão de Crédito</strong>
                 </div>
               </div>
-            </SuccessItems>
+            </OrderConfirmItems>
           </Border>
         </div>
-        <img src={successDelivery} alt="" />
-      </SuccessContainer>
+        <img src={orderConfirmDelivery} alt="" />
+      </OrderConfirmContainer>
     </>
   )
 }
